@@ -159,4 +159,22 @@ https://excalidraw.com/#json=A9Y11RIg6_-Fu5RXHhZPc,AhuPKHOZRIhA0x5Hm2w9Wg
 ![alt text](<Class Diagram.png>)
 
 # Part D: Game Mechanics Design 
+How a round is played
 The game begins by each player having his/her own deck of cards with the faces downward, and he/she can only see the topmost card of his/her deck.Around begins by each player having his/her own deck of cards with the faces downward, and he/she can only see the topmost card of his/her deck. The player whose turn it is looks at his/her topmost card and chooses one out of the six attributes, let’s say horsepower, to play against each other for that particular round. Each player then turns their topmost card upward at the same time, and whoever gets the highest value of that particular chosen attribute wins the round. He/She takes all the cards that have been played and adds them to the bottom of his/her own deck, and he/She becomes the one to decide the attribute for the next round.
+
+Selection of Attributes
+
+Each player evaluates his/her top card and chooses from any of the six attributes, acceleration, engine size, braking, horse power, year, or top speed that he/she thinks gives him/her an edge in winning that round. This is done without consulting any of the other players hence giving the player on his/her turn an edge since the player will be playing his/her own strengths.
+
+Winning in a Round
+
+Once the attributes have been chosen, all players will play their top cards and the numbers for that particular attribute will be compared. The person with the highest number will win the round and he/she will take all the cards played and place them at the bottom of his/her pile. The winner will choose the attribute for the next round. 
+
+How the game ends
+The game ends when one player has all of the cards, while the rest have none. The player with all the cards wins. If there is a pre-set number of rounds, the winner is the player who has more cards at that point.
+
+Game Balance
+The balance is achieved by normalizing each attribute so that each one does not exceed the maximum value and therefore, no one car is superior in all aspects. A car with exceptionally high horsepower won't always win in top speed or acceleration, thus giving players actual choices during each round as opposed to having one card better than the rest at all times. Nevertheless, there is a big problem since horsepower and top speed are highly correlated in reality, and thus the winner can focus on only those two aspects.
+
+Unfair advantage and fix
+The main unfair advantage of the game is that the person whose turn it is picks the attribute, which gives the player an opportunity to always play according to their best attribute, while all other players have to react to this choice without any prior knowledge of what is being chosen. As a result of the game, the one who has been winning for several rounds is gaining more and more advantage, as the one who has won the round is picking the attribute in the next round, thus making it impossible for other players to catch up. The solution is to pick the attribute by a certain order regardless of who won the last round.
