@@ -178,3 +178,9 @@ The balance is achieved by normalizing each attribute so that each one does not 
 
 Unfair advantage and fix
 The main unfair advantage of the game is that the person whose turn it is picks the attribute, which gives the player an opportunity to always play according to their best attribute, while all other players have to react to this choice without any prior knowledge of what is being chosen. As a result of the game, the one who has been winning for several rounds is gaining more and more advantage, as the one who has won the round is picking the attribute in the next round, thus making it impossible for other players to catch up. The solution is to pick the attribute by a certain order regardless of who won the last round.
+
+Structurechart: https://excalidraw.com/#json=1LwhhDx2l6PIr09n9UKLs,f_fbMgtP6NVrzlpeXQZ9oQ
+![alt text](<StructureChart.png>)
+
+# Part E — Interface and Card Design
+Card Design: ![alt text](<Top Trumps.png>)
