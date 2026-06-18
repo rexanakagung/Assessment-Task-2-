@@ -153,3 +153,7 @@ This is the player and here is where actions that the player can take to play wi
 
 **Description ()**
 This allows the system to interact with turns from players and terminate, start and manipulate the game.
+
+# PART C: Class Design
+https://excalidraw.com/#json=A9Y11RIg6_-Fu5RXHhZPc,AhuPKHOZRIhA0x5Hm2w9Wg
+![alt text](<Class Diagram.png>)
