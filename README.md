@@ -30,3 +30,126 @@ I have chose these attributes as they are the main factors of a car, they are ea
 | Top speed     | Top speed: 205 km/h (127 mph)                     | KM                   |   |   |
 
 # Part B — Class Design
+
+## Car
+
+**Attributes ()**
+- `private String make`
+- `private String model`
+- `private int year`
+- `private double acceleration`
+- `private double engineSize`
+- `private double brakingSpeed`
+- `private int horsepower`
+- `private int topSpeed`
+
+**Methods ()**
+- `public String getMake()`
+- `public String getModel()`
+- `public int getYear()`
+- `public double getAcceleration()`
+- `public double getEngineSize()`
+- `public double getBrakingSpeed()`
+- `public int getHorsepower()`
+- `public int getTopSpeed()`
+- `public String displaySpecs()`
+
+**Description ()**
+This stores the real-world data for a single car, sourced from carsales.com. It holds the six attributes selected in Part A and exists purely to store data — it has no game logic, which keeps it reusable and separates "what a car is" from "how the game uses it."
+
+---
+
+## Card
+
+**Attributes ()**
+- `private Car car`
+- `private boolean isFaceUp`
+- `private String cardID`
+
+**Methods ()**
+- `public Car getCar()`
+- `public double getAttributeValue(String attributeName)`
+- `public void revealCard()`
+- `public String displayCard()`
+
+**Description ()**
+This wraps a Car object so the card game doesn't need to know about car internals directly — Card is the thing that gets played, compared and passed between players, while Car is just the data. This is a composition relationship (Card *has a* Car), worth naming explicitly in your justification.
+
+---
+
+## Deck
+
+**Attributes ()**
+- `private ArrayList<Card> cards`
+- `private int remainingCards`
+
+**Methods ()**
+- `public void buildDeck()`
+- `public void shuffleDeck()`
+- `public Card dealCard()`
+- `public boolean isEmpty()`
+- `public int getRemainingCount()`
+- `public void resetDeck()`
+
+**Description ()**
+This manages the full collection of cards — building it from car data, shuffling, and dealing one card at a time to players. It's the only class that should touch the full set of cards at once, keeping Player and Game from needing to know how dealing actually works.
+
+---
+
+## Player
+
+**Attributes ()**
+- `private int playerID`
+- `private String playerName`
+- `private ArrayList<Card> hand`
+- `private int score`
+- `private int roundsWon`
+- `private boolean isCurrentTurn`
+- `private Card activeCard`
+
+**Methods ()**
+- `public void drawCard(Deck deck)`
+- `public Card playCard()`
+- `public String chooseAttribute()`
+- `public void receiveCard(Card card)`
+- `public void addPoint()`
+- `public void incrementRoundsWon()`
+- `public Card getTopCard()`
+- `public boolean hasCardsRemaining()`
+- `public void displayHand()`
+
+**Description ()**
+This is the player and here is where actions that the player can take to play will be executed.
+
+---
+
+## Game
+
+**Attributes ()**
+- `private int gameID`
+- `private ArrayList<Player> players`
+- `private Deck deck`
+- `private int currentRound`
+- `private Player currentPlayer`
+- `private Player winningPlayer`
+- `private String gameStatus`
+- `private Player roundWinner`
+- `private ArrayList<Card> cardsInBattle`
+
+**Methods ()**
+- `public void startGame()`
+- `public void setupPlayers()`
+- `public void dealCards()`
+- `public void playRound()`
+- `public void compareCards()`
+- `public Player determineRoundWinner()`
+- `public void awardCardsToWinner()`
+- `public void switchTurn()`
+- `public boolean checkGameOver()`
+- `public Player determineGameWinner()`
+- `public void displayLeaderboard()`
+- `public void restartGame()`
+- `public void endGame()`
+
+**Description ()**
+This allows the system to interact with turns from players and terminate, start and manipulate the game.
